@@ -1,19 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --baseoutlineui: rgb(59, 137, 255);
+    --basecolorbackground: rgb(233, 230, 230);
+    --whiteuibackground:  white;
+
+    --borderNav: 5px solid var(--baseoutlineui);
 }
 
 body {
     background-color: var(--basecolorbackground);
 }
 
-:root {
-    --baseoutlineui: rgb(59, 137, 255);
-    --basecolorbackground: rgb(255, 255, 255);
+/*NAVIGATION BAR START*/
 
-    --borderNav: 5px solid var(--baseoutlineui);
+#navbar {
+    border: 4px solid var(--baseoutlineui);
+    background-color: var(--whiteuibackground);
+    border-radius: 0 0 7px 7px;
+    width: 100%;
+    height: 18vh;
 }
+
+.checkbars {
+    position: relative;
+    float: right;
+    line-height: 75px;
+    font-size: 3rem;
+    cursor: pointer;
+    margin: 15px;
+}
+
+#bar {
+    color: var(--baseoutlineui);
+}
+
+#check {
+    display: none;
+}
+
+#navicons {
+    border: 4px solid var(--baseoutlineui);
+    position: fixed;
+    width: 90%;
+    height: calc(100vh - 18vh);
+    top: 18vh;
+    right: -100%;
+    background-color: rgb(22, 34, 71);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease-in;
+
+}
+
+#navicon {
+    color: white;
+}
+
+#navicons li {
+    border: 4px solid var(--baseoutlineui);
+    width: 230px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#navicons li a {
+    margin-left: 10px;
+    letter-spacing: 3px;
+    color: white;
+}
+
+#check:checked ~ #navicons {
+    right: 0; 
+}
+
+/*NAVIGATION BAR END*/
+
+/*MAIN SECTIONS START*/
+
+    /*WELCOME SECTION START*/
+
+    #welcomeSection {
+        border-radius: 7px;
+        background-color: var(--whiteuibackground);
+        width: 90%;
+        height: calc(100vh - 25vh);
+        margin: 20px auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcomeText {
+        font-size: 2rem;
+        font-family: 'Notable', sans-serif;
+        letter-spacing: 3px;
+        padding: 15px;
+        border-bottom: 3px solid var(--baseoutlineui);
+    }
+
+    .introduction {
+        text-align: center;
+        margin: 10px;
+    }
+
+    /*WELCOME SECTION END*/
+
+/*MAIN SECTIONS END*/
+
 
